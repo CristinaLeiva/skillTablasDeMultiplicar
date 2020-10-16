@@ -21,3 +21,6 @@ OTRAS OPCIONES DE DESARROLLO:
   - Qué el usuario diga una tabla y Alexa le diga si es correcta.
   - Sistema de puntos para motivar.
   - Multiplicaciones de dos cifras por una cifra.
+
+Permisos necesarios:
+  - Acceso al nombre de usuario del dispositivo únicamente para hacer más personal la skill, nunca se utilizará para otros fines ni para cederla a terceros. 
