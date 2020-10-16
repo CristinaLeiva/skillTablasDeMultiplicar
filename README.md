@@ -20,4 +20,4 @@ NIVEL EXPERTO:
 OTRAS OPCIONES DE DESARROLLO:
   - Qué el usuario diga una tabla y Alexa le diga si es correcta.
   - Sistema de puntos para motivar.
-  - 
+  - Multiplicaciones de dos cifras por una cifra.
