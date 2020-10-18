@@ -1,0 +1,341 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "tablas de multiplicar ferlei",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "PreguntaLaTablaIntent",
+          "slots": [
+            {
+              "name": "num_tabla",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "quiero la tabla del {num_tabla}",
+            "la del {num_tabla}",
+            "Practicar la tabla del {num_tabla}",
+            "Quiero practicar la tabla del {num_tabla}",
+            "La tabla del {num_tabla}"
+          ]
+        },
+        {
+          "name": "RespuestaUsuarioIntent",
+          "slots": [
+            {
+              "name": "respuesta_usuario",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "{respuesta_usuario}"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "id": "12",
+              "name": {
+                "value": "diciembre"
+              }
+            },
+            {
+              "id": "11",
+              "name": {
+                "value": "noviembre"
+              }
+            },
+            {
+              "id": "10",
+              "name": {
+                "value": "octubre"
+              }
+            },
+            {
+              "id": "09",
+              "name": {
+                "value": "septiembre"
+              }
+            },
+            {
+              "id": "08",
+              "name": {
+                "value": "agosto"
+              }
+            },
+            {
+              "id": "07",
+              "name": {
+                "value": "julio"
+              }
+            },
+            {
+              "id": "06",
+              "name": {
+                "value": "junio"
+              }
+            },
+            {
+              "id": "05",
+              "name": {
+                "value": "mayo"
+              }
+            },
+            {
+              "id": "04",
+              "name": {
+                "value": "abril"
+              }
+            },
+            {
+              "id": "03",
+              "name": {
+                "value": "marzo"
+              }
+            },
+            {
+              "id": "02",
+              "name": {
+                "value": "febrero"
+              }
+            },
+            {
+              "id": "01",
+              "name": {
+                "value": "enero",
+                "synonyms": [
+                  "primero",
+                  "primer mes del año"
+                ]
+              }
+            }
+          ],
+          "name": "TipoMes"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "PreguntaLaTablaIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "num_tabla",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.985906691489.432504999564"
+              },
+              "validations": [
+                {
+                  "type": "isGreaterThanOrEqualTo",
+                  "prompt": "Slot.Validation.985906691489.432504999564.1587891048800",
+                  "value": "1"
+                },
+                {
+                  "type": "isLessThanOrEqualTo",
+                  "prompt": "Slot.Validation.985906691489.432504999564.1384261216633",
+                  "value": "10"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.653974572406.1040382425372",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "vale. me has dicho que cumples en el mes de {month} pero que día?"
+          },
+          {
+            "type": "PlainText",
+            "value": "que día cumples?"
+          },
+          {
+            "type": "PlainText",
+            "value": "en que día es?"
+          },
+          {
+            "type": "PlainText",
+            "value": "dime en que día del mes es"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.282358190483.487594834711",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "dime ahora el mes en que cumples"
+          },
+          {
+            "type": "PlainText",
+            "value": "en que mes cumples?"
+          },
+          {
+            "type": "PlainText",
+            "value": "en que mes es?"
+          },
+          {
+            "type": "PlainText",
+            "value": "vale, el día {day} .pero en que mes?"
+          },
+          {
+            "type": "PlainText",
+            "value": "en que mes?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.190694681136.1424851421300.1030431910159",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Por favor dime un día mayor o igual que uno"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.190694681136.1424851421300.837658517617",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Por favor dime un día menor o igual a treinta y uno"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.190694681136.463018349705.1461889218555",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Por favor dime un mes válido"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1253554922892.1358447173887",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "eres de {month} de que año?"
+          },
+          {
+            "type": "PlainText",
+            "value": "vale. el {day} de {month} . de que año?"
+          },
+          {
+            "type": "PlainText",
+            "value": "ahora dime el año de nacimiento"
+          },
+          {
+            "type": "PlainText",
+            "value": "en que año has nacido?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.1253554922892.1358447173887.1026742417738",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "No creo que tengas tantos años. Inténtalo otra vez"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.1253554922892.1358447173887.176185058059",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "No creo que tengas tan pocos años. Inténtalo otra vez"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.304811208575.1537578687568",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Cual es el mensaje para el recordatorio?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Genial. Ahora dime el mensaje a leer cuando se active el recordatorio"
+          },
+          {
+            "type": "PlainText",
+            "value": "Vale. Dime por favor el mensaje para el recordatorio"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.365130846483.1013258111762",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "El mensaje. {message} .Será enviado cuando cumplas años. Lo confirmas?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Te enviaré el siguiente mensaje cuando cumplas años. {message} . De acuerdo?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.985906691489.432504999564.1587891048800",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Podemos practicar las tablas del uno al diez, dime un número de tabla válido."
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.985906691489.432504999564.1384261216633",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Podemos practicar las tablas del uno al diez, dime un número de tabla válido."
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.985906691489.432504999564",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Podemos practicar la tabla del uno al diez. Puedes decirme, quiero practicar la tabla del tres, por ejemplo."
+          }
+        ]
+      }
+    ]
+  },
+  "version": "6"
+}
