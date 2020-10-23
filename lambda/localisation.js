@@ -11,11 +11,12 @@ module.exports = {
         translation: {
             WELCOME_MSG: 'Hola {{name}} Vamos a aprender las tablas de multiplicar. Dime, ¿qué tabla quieres practicar? ',
             HELP_MSG: 'Puedes decirme: Quiero practicar la tabla del 2, por ejemplo. ',
-            PREGUNTA_LA_TABLA_MSG: 'Muy bien, practiquemos la tabla del {{num_tabla}}. ',
+            PREGUNTA_LA_TABLA_MSG: 'Muy bien, practiquemos la tabla del {{num_tabla}}. Si quieres cambiar de tabla di quiero cambiar de tabla. ',
             LINEA_DE_TABLA_MSG: 'Dime, ¿cuánto es {{factor1}} por {{factor2}}? ',
             RESPUESTA_CORRECTA_MSG: '¡Felicidades {{name}}! La respuesta es correcta. ',
             RESPUESTA_INCORRECTA_MSG: '¡Ohhhhh! ¡Qué pena! La respuesta correcta es {{respuesta_correcta}}. ',
-            GOODBYE_MSG: ['Hasta luego {{name}}! ', 'Adios {{name}}! ', 'Hasta pronto {{name}}! ', 'Nos vemos {{name}}! ']
+            GOODBYE_MSG: ['Hasta luego {{name}}! ', 'Adios {{name}}! ', 'Hasta pronto {{name}}! ', 'Nos vemos {{name}}! '],
+            CAMBIAR_DE_TABLA_MSG: 'Muy bien, cambiemos de tabla. Dime, ¿qué tabla quieres practicar ahora? '
             /*
             DAYS_LEFT_MSG: '{{name}} Queda {{count}} día ',
             DAYS_LEFT_MSG_plural: '{{name}} Quedan {{count}} días ',

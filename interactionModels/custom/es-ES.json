@@ -46,91 +46,20 @@
           "samples": [
             "{respuesta_usuario}"
           ]
+        },
+        {
+          "name": "CambiarDeTablaIntent",
+          "slots": [],
+          "samples": [
+            "preguntame otra tabla",
+            "ya no quiero esta tabla",
+            "cambiemos de tabla",
+            "cambia de tabla",
+            "quiero cambiar de tabla"
+          ]
         }
       ],
-      "types": [
-        {
-          "values": [
-            {
-              "id": "12",
-              "name": {
-                "value": "diciembre"
-              }
-            },
-            {
-              "id": "11",
-              "name": {
-                "value": "noviembre"
-              }
-            },
-            {
-              "id": "10",
-              "name": {
-                "value": "octubre"
-              }
-            },
-            {
-              "id": "09",
-              "name": {
-                "value": "septiembre"
-              }
-            },
-            {
-              "id": "08",
-              "name": {
-                "value": "agosto"
-              }
-            },
-            {
-              "id": "07",
-              "name": {
-                "value": "julio"
-              }
-            },
-            {
-              "id": "06",
-              "name": {
-                "value": "junio"
-              }
-            },
-            {
-              "id": "05",
-              "name": {
-                "value": "mayo"
-              }
-            },
-            {
-              "id": "04",
-              "name": {
-                "value": "abril"
-              }
-            },
-            {
-              "id": "03",
-              "name": {
-                "value": "marzo"
-              }
-            },
-            {
-              "id": "02",
-              "name": {
-                "value": "febrero"
-              }
-            },
-            {
-              "id": "01",
-              "name": {
-                "value": "enero",
-                "synonyms": [
-                  "primero",
-                  "primer mes del año"
-                ]
-              }
-            }
-          ],
-          "name": "TipoMes"
-        }
-      ]
+      "types": []
     },
     "dialog": {
       "intents": [
@@ -337,5 +266,5 @@
       }
     ]
   },
-  "version": "6"
+  "version": "7"
 }
