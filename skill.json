@@ -1,5 +1,40 @@
 {
   "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "es-ES": {
+          "summary": "Practica las tablas de multiplicar con Ferlei Kids",
+          "examplePhrases": [
+            "Alexa abre tablas de multiplicar Ferlei",
+            "quiero practicar la tabla del 2",
+            "cambia de tabla"
+          ],
+          "keywords": [
+            "tablas",
+            "multiplicar",
+            "ferlei"
+          ],
+          "name": "Tablas de Multiplicar Ferlei Kids",
+          "description": "Esta skill ayuda a los niños ( a los no tan niños) a practicar las tablas de multiplicar.\nDile qué tabla quieres practicar y cuando quieras dile que cambie a otra.",
+          "smallIconUri": "file://assets/images/es-ES_smallIconUri.png",
+          "updatesDescription": "¡Practica las tablas de multiplicar con Ferlei Kids!\nNueva y divertida skill que ayudará a los niños a practicar las tablas de multiplicar.",
+          "largeIconUri": "file://assets/images/es-ES_largeIconUri.png"
+        }
+      },
+      "automaticDistribution": {
+        "sourceLocaleForLanguages": [
+          {
+            "sourceLocale": "es-ES",
+            "language": "es"
+          }
+        ],
+        "isActive": true
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "\"Alexa, abre tablas de multiplicar Ferlei\"\n\"Quiero practicar la tabla del 2\"\n\"La tabla del 2\"\n\"La del 2\"\n\"Quiero cambiar de tabla\"\n\"Cambia de tabla\"",
+      "category": "EARLY_LEARNING",
+      "distributionCountries": []
+    },
     "apis": {
       "custom": {
         "endpoint": {
@@ -7,14 +42,14 @@
         },
         "interfaces": [],
         "regions": {
-          "NA": {
-            "endpoint": {
-              "uri": "arn:aws:lambda:us-east-1:934760434538:function:bdb58e0b-0672-4a8c-b7ba-19afecd7f2dd:Release_0"
-            }
-          },
           "EU": {
             "endpoint": {
               "uri": "arn:aws:lambda:eu-west-1:934760434538:function:bdb58e0b-0672-4a8c-b7ba-19afecd7f2dd:Release_0"
+            }
+          },
+          "NA": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-east-1:934760434538:function:bdb58e0b-0672-4a8c-b7ba-19afecd7f2dd:Release_0"
             }
           },
           "FE": {
@@ -35,31 +70,16 @@
       }
     ],
     "privacyAndCompliance": {
-      "locales": {
-        "es-ES": {}
-      }
-    },
-    "publishingInformation": {
-      "automaticDistribution": {
-        "isActive": false
-      },
-      "category": "KNOWLEDGE_AND_TRIVIA",
-      "distributionCountries": [],
-      "isAvailableWorldwide": true,
+      "allowsPurchases": false,
       "locales": {
         "es-ES": {
-          "description": "Recuerda el cumpleaños del usuario.",
-          "examplePhrases": [
-            "Alexa abre feliz cumpleaños Ferlei",
-            "mi cumple es el 1 de enero de 2000",
-            "ayuda"
-          ],
-          "keywords": [],
-          "name": "Tablas de Multiplicar",
-          "summary": "Recuerda los cumpleaños"
+          "privacyPolicyUrl": "https://github.com/CristinaLeiva/skillTablasDeMultiplicar/blob/main/privacyPolicy"
         }
       },
-      "testingInstructions": "Sample Testing Instructions."
+      "containsAds": false,
+      "isExportCompliant": true,
+      "isChildDirected": false,
+      "usesPersonalInfo": true
     }
   }
 }
